@@ -15,7 +15,9 @@ pip3 install web3 python-dotenv schedule
 # Create project
 mkdir cti-dao && cd cti-dao && \
 npx hardhat init --typescript && \
-git clone https://github.com/chainlink-cti/dao-template . && \
+git clone 
+https://github.com/chainlink-cti/dao-template
+ . && \
 npm install @chainlink/contracts @openzeppelin/contracts dotenv
 ```
 
@@ -27,7 +29,9 @@ Create `.env` file:
 echo 'ALCHEMY_KEY="your-alchemy-key"
 PRIVATE_KEY="your-metamask-private-key"
 LINK_TOKEN="0x326C977E6efc84E512bB9C30f76E1c2ECe11728"
-JOB_ID="7d80a6386d543a4696259a0c5ace9d4e"' > .env
+JOB_ID="
+7d80a6386d543a4696259a0c5ace9d4e
+"' > .env
 ```
 
 ---
@@ -50,11 +54,15 @@ contract CTIAggregator is ChainlinkClient {
 
     function requestCTIData() public {
         Chainlink.Request memory req = buildChainlinkRequest(
-            "7d80a6386d543a4696259a0c5ace9d4e",
+            "
+7d80a6386d543a4696259a0c5ace9d4e
+",
             address(this),
             this.fulfill.selector
         );
-        req.add("get", "https://osint.digitalside.it/feeds/dti.txt");
+        req.add("get", "
+https://osint.digitalside.it/feeds/dti.txt
+");
         sendChainlinkRequest(req, 0.1 ether);
     }
 
@@ -149,4 +157,4 @@ This implementation provides:
 The system will begin populating threat indicators automatically after deployment. Data becomes available through multiple access methods within 60 minutes of initial setup.
 
 ---
-Answer from Perplexity: pplx.ai/share
+AI Disclaimer - Answer from Perplexity: pplx.ai/share

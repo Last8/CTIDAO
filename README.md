@@ -1,3 +1,5 @@
+#This is just a theory, a dream if you will
+
 # CTIDAO
 Cyber Threat Intelligence DAO
 
